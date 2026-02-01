@@ -25,8 +25,6 @@ A full-stack Task Management application built with **Laravel**, featuring **API
 - **Database:** MySQL
 - **Version Control:** Git & GitHub
 
----
-
 ## 🔐 Authentication
 
 This project uses **Laravel Breeze** for authentication, providing:
@@ -50,6 +48,4 @@ This project uses **Laravel Breeze** for authentication, providing:
 All API routes are protected using **Sanctum authentication**.
 
 
-
 ## 📂 Project Structure
-
