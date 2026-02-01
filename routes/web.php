@@ -21,10 +21,14 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-route::get('tasks/create',[TaskManagementController::class,'create'])->name('tasks.create');
-route::post('tasks/store',[TaskManagementController::class,'store'])->name('tasks.store');
-route::get('tasks/index',[TaskManagementController::class,'index'])->name('tasks.index');
-route::get('tasks/edit',[TaskManagementController::class,'edit'])->name('tasks.edit');
+// Route::resource('tasks', TaskManagementController::class);
 
+ Route::get('tasks/create',[TaskManagementController::class,'create'])->name('tasks.create');
+ route::post('tasks/store',[TaskManagementController::class,'store'])->name('tasks.store');
+route::get('tasks/index',[TaskManagementController::class,'index'])->name('tasks.index');
+Route::get('tasks/edit/{task}', [TaskManagementController::class, 'edit'])->name('tasks.edit');
 Route::put('tasks/update/{task}', [TaskManagementController::class, 'update'])->name('tasks.update');
-Route::delete('tasks/destroy/{task}', [TaskManagementController::class, 'destroy'])->name('tasks.destroy');
+Route::delete('tasks/delete/{task}', [TaskManagementController::class, 'destroy'])->name('tasks.destroy');
+
+
+//  Route::delete('tasks/destroy/{task}', [TaskManagementController::class, 'destroy'])->name('tasks.destroy');

@@ -78,7 +78,7 @@
 
     <h1>User Registration</h1>
 
-    <form method="POST" action="{{ route('/login') }}">
+    <form method="POST" action="{{ route('registerlogin') }}">
         @csrf
 
     
